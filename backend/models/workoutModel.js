@@ -15,7 +15,12 @@ const workoutScheema = Schema({
     load: {
         type: Number,
         required: true
+    },//to assign particular database document to one particular user
+    user_id:{
+        type: String,
+        required: true
     }
+    
 }, { timestamps: true });
 
 
