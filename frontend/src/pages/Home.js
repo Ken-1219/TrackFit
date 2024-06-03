@@ -14,12 +14,11 @@ function Home() {
     useEffect(() => {
         const fetchWorkouts = async () => {
             //connecting to backend using the fetch api
-            const response = await fetch('https://track-fit-api.vercel.app/api/workouts', {
+            const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/workouts`, {
                 headers:{
                     'Authorization': `Bearer ${user.token}`
                 }
             });
-            //since the proxy has been set in package.json file, we need only relative path
             const json = await response.json();
 
             if (response.ok) {

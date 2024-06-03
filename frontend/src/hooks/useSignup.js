@@ -11,7 +11,7 @@ export const useSignup = () => {
         setIsLoading(true);
         setError(null); //reset the error to null
 
-        const response = await fetch('https://track-fit-api.vercel.app/api/user/signup', {
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/signup`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

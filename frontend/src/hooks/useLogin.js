@@ -10,15 +10,14 @@ export const useLogin = () => {
     const login = async (email, password) => {
         setIsLoading(true);
         setError(null); //reset the error to null
-
-        const response = await fetch('https://track-fit-api.vercel.app/api/user/login', {
+        console.log(`${process.env.REACT_APP_BACKEND_URL}/api/user/login`);
+        const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/login`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({ email, password })
         });
-        console.log(response);
         const json = await response.json();
         
         if (!response.ok) {
