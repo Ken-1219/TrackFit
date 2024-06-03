@@ -10,7 +10,6 @@ export const useLogin = () => {
     const login = async (email, password) => {
         setIsLoading(true);
         setError(null); //reset the error to null
-        console.log(`${process.env.REACT_APP_BACKEND_URL}/api/user/login`);
         const response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/api/user/login`, {
             method: 'POST',
             headers: {

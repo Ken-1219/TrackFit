@@ -52,7 +52,6 @@ function WorkoutForm() {
             setReps('');
             setError(null);
             setEmptyFields([]);
-            console.log("New Workout Added", json);
             dispatch({
                 type: "Create_Workout",
                 payload: json
