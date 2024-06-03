@@ -14,7 +14,7 @@ function Home() {
     useEffect(() => {
         const fetchWorkouts = async () => {
             //connecting to backend using the fetch api
-            const response = await fetch('http://localhost:4000/api/workouts', {
+            const response = await fetch('https://track-fit-api.vercel.app/api/workouts', {
                 headers:{
                     'Authorization': `Bearer ${user.token}`
                 }

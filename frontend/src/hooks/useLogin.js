@@ -11,7 +11,7 @@ export const useLogin = () => {
         setIsLoading(true);
         setError(null); //reset the error to null
 
-        const response = await fetch('http://localhost:4000/api/user/login', {
+        const response = await fetch('https://track-fit-api.vercel.app/api/user/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

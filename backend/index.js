@@ -17,7 +17,7 @@ app.use((req, res, next) => {
     next();
 })
 //using this middleware to bypass the CORS - Cross-Origin-Resource-Sharing
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors());
 
 
 //Routes
